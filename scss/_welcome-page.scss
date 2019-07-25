@@ -1,0 +1,66 @@
+$main-green: rgb(11, 236, 154);
+$txt-color: #eeeeee;
+
+.content{
+  padding-top: 10vh;
+  background-color:forestgreen;
+  height: 100vh;
+
+.container {
+  margin: 0 auto;
+  background-color: white;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+
+    .text{
+             background-color: red;
+            //  height: 100%;
+             padding-left: 5vw;
+             width: 40vh;
+             float: left;
+             justify-content: center;
+             align-content: center;
+             flex: 3;
+    }
+    
+
+.scroll{
+    background-color: black;
+    float: left;
+    // height: 40vh;
+    color: white;
+    // width: 30vw;
+    flex:1;
+  }
+
+  .pic{
+      background-color: aqua;
+      float: right;
+    //   width: 30vw;
+    flex: 2;
+  }
+
+}
+}
+
+@media (max-width: 800px) {
+
+
+    .container {
+        flex-direction: column !important;
+        height: 90vh !important;
+        .text{
+        margin: 0 auto;
+        }
+        .scroll{
+            order:2;
+        }
+        .pic{
+            order:1;
+        }
+
+    }
+}
+
+

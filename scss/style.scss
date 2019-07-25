@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+  body {
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box; 
+  }
+  
+  section {
+    width: 100%;
+    margin: 0;
+    max-width: none;
+    background-color: #373B44;
+    height: 100vh;
+    
+    &:nth-of-type(2) {
+      background-color: white;
+    }
+
+    &:nth-of-type(3) {
+      background-color: #373B44;
+    }
+  }
+
+@import 'welcome-page';
+
+
+
+  
+  
