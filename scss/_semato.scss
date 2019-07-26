@@ -1,0 +1,116 @@
+#triangle-topleft {
+    // z-index: 0;
+    // position: absolute;
+    // width: 0;
+    // height: 0;
+    // border-top: 90vh solid #0385a5;
+    // border-right: 80vw solid transparent;
+    // bottom: -10px;
+    left: calc(30%);
+    // transform: rotate(90deg);
+    position: absolute;
+    height: 80vh;
+    width: 70%;
+    display: block;
+    background-image: linear-gradient(to left, #016a85 , #008aac);
+    clip-path: polygon(100% 100%, 0% 0%, 100% 0%);
+  }
+
+
+  #semato{
+    padding-top: 10vh;
+    height: 100vh;
+    width: 100%;
+
+    .container {
+      margin: 0 auto;
+      height: 80vh;
+      display: flex;
+      flex-direction: row;
+
+        .description{
+            z-index: 99;
+            flex:3.5;
+            padding: 0;
+                .title{
+                    position: relative;
+                    color:#252525;
+                    z-index: 100;
+                    margin-top: -1rem;
+                    padding-left: 5vw;
+                    font-size: 80px;
+            
+                    .number{
+                        color: #242424;
+                        opacity: 0.8;
+                    }
+                    .light{
+                        font-weight: 200;
+                        font-size: 30px;
+                        letter-spacing: 10px;
+                    }
+                }
+
+                .semato-content{
+                    margin-left: 5vw;
+                    margin-top: 5rem;
+                    display: flex;
+                    flex-direction: column;
+                    color: #292929;
+            
+                    .describe{
+                         h1{
+                             text-transform: uppercase;
+                             color:#242424;
+                             font-weight: 500;
+                         }
+                     }
+
+                     .technology{
+                        margin-top: 3rem;
+          
+                    ul li {
+                      display: inline;
+                      margin-right: 5px;
+                      list-style: none;
+                    }
+                  }
+                    .github{
+                        margin-top: 3rem;
+
+                        font-size: 15px;
+                         a{
+                            text-align: center;
+                            padding-left: 10px;
+                            text-decoration: none;
+                            color: #0385a5;
+                        i{
+                            display: block;
+                            float: left;
+                            font-size: 30px;
+                        text-decoration: none;
+            
+                        }
+                    }
+
+                    }
+                      
+            
+            
+        }
+    }
+
+    .change-image-section{
+        z-index: 99;
+        flex:1;
+        background-color: black;
+    }
+
+        .images{
+            z-index: 99;
+            flex:4;
+            background-color: yellow;
+        }
+
+      }
+  }

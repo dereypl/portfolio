@@ -1,32 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  font-family: 'Oswald', sans-serif;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-section {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #161618;
-  height: 100vh;
-}
-
-section:nth-of-type(2) {
-  background-color: white;
-}
-
-section:nth-of-type(3) {
-  background-color: #373B44;
-}
-
 .content {
   padding-top: 10vh;
   height: 100vh;
@@ -276,7 +247,6 @@ section:nth-of-type(3) {
   }
   .content .container .pic #pic-wrap {
     margin-top: -25px;
-    background-color: aqua;
   }
 }
 
@@ -361,5 +331,156 @@ section:nth-of-type(3) {
     height: 250px;
     opacity: 1;
   }
+}
+
+#triangle-topleft {
+  left: calc(30%);
+  position: absolute;
+  height: 80vh;
+  width: 70%;
+  display: block;
+  background-image: -webkit-gradient(linear, right top, left top, from(#016a85), to(#008aac));
+  background-image: linear-gradient(to left, #016a85, #008aac);
+  -webkit-clip-path: polygon(100% 100%, 0% 0%, 100% 0%);
+          clip-path: polygon(100% 100%, 0% 0%, 100% 0%);
+}
+
+#semato {
+  padding-top: 10vh;
+  height: 100vh;
+  width: 100%;
+}
+
+#semato .container {
+  margin: 0 auto;
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#semato .container .description {
+  z-index: 99;
+  -webkit-box-flex: 3.5;
+      -ms-flex: 3.5;
+          flex: 3.5;
+  padding: 0;
+}
+
+#semato .container .description .title {
+  position: relative;
+  color: #252525;
+  z-index: 100;
+  margin-top: -1rem;
+  padding-left: 5vw;
+  font-size: 80px;
+}
+
+#semato .container .description .title .number {
+  color: #242424;
+  opacity: 0.8;
+}
+
+#semato .container .description .title .light {
+  font-weight: 200;
+  font-size: 30px;
+  letter-spacing: 10px;
+}
+
+#semato .container .description .semato-content {
+  margin-left: 5vw;
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #292929;
+}
+
+#semato .container .description .semato-content .describe h1 {
+  text-transform: uppercase;
+  color: #242424;
+  font-weight: 500;
+}
+
+#semato .container .description .semato-content .technology {
+  margin-top: 3rem;
+}
+
+#semato .container .description .semato-content .technology ul li {
+  display: inline;
+  margin-right: 5px;
+  list-style: none;
+}
+
+#semato .container .description .semato-content .github {
+  margin-top: 3rem;
+  font-size: 15px;
+}
+
+#semato .container .description .semato-content .github a {
+  text-align: center;
+  padding-left: 10px;
+  text-decoration: none;
+  color: #0385a5;
+}
+
+#semato .container .description .semato-content .github a i {
+  display: block;
+  float: left;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+#semato .container .change-image-section {
+  z-index: 99;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: black;
+}
+
+#semato .container .images {
+  z-index: 99;
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+  background-color: yellow;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #161618;
+  height: 100vh;
+}
+
+section:nth-of-type(2) {
+  background-color: white;
+}
+
+section:nth-of-type(3) {
+  background-color: #161618;
 }
 /*# sourceMappingURL=style.css.map */
