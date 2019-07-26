@@ -29,13 +29,13 @@ section:nth-of-type(3) {
 
 .content {
   padding-top: 10vh;
-  background-color: forestgreen;
   height: 100vh;
+  background: url("../images/pasich_lowpolybg.png") no-repeat center;
+  background-attachment: fixed;
 }
 
 .content .container {
   margin: 0 auto;
-  background-color: white;
   height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -47,18 +47,55 @@ section:nth-of-type(3) {
 }
 
 .content .container .text {
-  background-color: red;
-  padding-left: 5vw;
-  width: 40vh;
-  float: left;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
+.content .container .text #welcomeMessage {
+  display: block;
+  margin-left: 5vw;
+  margin-top: 8vh;
+  width: 40rem;
+  color: #eeeeee;
+  font-weight: 400;
+  font-size: 10rem;
+  line-height: 10rem;
+  text-transform: uppercase;
+  word-break: break-all;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+  cursor: default;
+}
+
+.content .container .text #welcomeMessage #hi {
+  font-size: 1.53em;
+}
+
+.content .container .text #welcomeMessage #green {
+  color: #0bec9a;
+}
+
+.content .container .text #welcomeMessage #name {
+  color: #0bec9a;
+}
+
+.content .container .text #welcomeMessage #lname {
+  font-size: 1.25em;
+}
+
+.content .container .text #welcomeMessage #info {
+  margin-left: 2%;
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 200;
+  letter-spacing: 15px;
+  margin-top: 20px;
+  line-height: 0;
+  color: #0bec9a;
 }
 
 .content .container .scroll {
@@ -73,28 +110,69 @@ section:nth-of-type(3) {
 .content .container .pic {
   background-color: aqua;
   float: right;
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
+@media (max-width: 1120px) {
+  .content .container .text #welcomeMessage {
+    border-color: aquamarine !important;
+    width: 25rem;
+    font-size: 7rem;
+    line-height: 6rem;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    margin-bottom: 50px;
+  }
 }
 
 @media (max-width: 800px) {
-  .container {
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
-    height: 90vh !important;
+  .content .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 90vh;
   }
-  .container .text {
+  .content .container .text #welcomeMessage {
     margin: 0 auto;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
-  .container .scroll {
+  .scroll {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
   }
-  .container .pic {
+  .pic {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+@media (max-width: 400px) {
+  .content .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 90vh;
+  }
+  .content .container .text #welcomeMessage {
+    margin-left: -25px;
+    margin-top: -50px;
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    line-height: 7rem;
+  }
+  .scroll {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .pic {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
