@@ -443,7 +443,72 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background-color: black;
+  text-align: center;
+}
+
+#semato .container .change-image-section .change {
+  width: 50%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 15vh;
+  margin: 0 auto;
+}
+
+#semato .container .change-image-section .change .arrow {
+  height: 2rem;
+  width: 5rem;
+  margin-top: 10px;
+  opacity: 0.4;
+}
+
+#semato .container .change-image-section .change .img {
+  height: 5rem;
+  width: 5rem;
+  background-color: #181818;
+  border-radius: 50%;
+  margin: 10px auto;
+  opacity: .4;
+  cursor: pointer;
+}
+
+#semato .container .change-image-section .change .img:hover {
+  opacity: 1;
+}
+
+#semato .container .change-image-section .change .selected {
+  margin: 25px auto;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  opacity: 1;
+  border: 5px solid silver;
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+          box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+}
+
+#semato .container .change-image-section .change .img-1 {
+  background: url("../images/smt2.png") center no-repeat;
+  background-size: 200px;
+  background-position-x: 20%;
+}
+
+#semato .container .change-image-section .change .img-2 {
+  background: url("../images/smt1.png") center;
+  background-size: 300px;
+  background-position-x: 40%;
+}
+
+#semato .container .change-image-section .change .img-3 {
+  background: url("../images/smt3.png") center;
+  background-size: 200px;
+  background-position-x: 50%;
+}
+
+#semato .container .change-image-section .change .img-4 {
+  background: url("../images/smt4.png") center;
+  background-size: 200px;
+  background-position-x: 50%;
 }
 
 #semato .container .images {
