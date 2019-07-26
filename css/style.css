@@ -32,6 +32,7 @@ section:nth-of-type(3) {
   height: 100vh;
   background: url("../images/pasich_lowpolybg.png") no-repeat center;
   background-attachment: fixed;
+  overflow: hidden;
 }
 
 .content .container {
@@ -54,7 +55,7 @@ section:nth-of-type(3) {
 
 .content .container .text #welcomeMessage {
   display: block;
-  margin-left: 5vw;
+  margin-left: 8vw;
   margin-top: 8vh;
   width: 40rem;
   color: #eeeeee;
@@ -73,6 +74,7 @@ section:nth-of-type(3) {
 
 .content .container .text #welcomeMessage #hi {
   font-size: 1.53em;
+  display: none;
 }
 
 .content .container .text #welcomeMessage #green {
@@ -80,10 +82,12 @@ section:nth-of-type(3) {
 }
 
 .content .container .text #welcomeMessage #name {
+  display: none;
   color: #0bec9a;
 }
 
 .content .container .text #welcomeMessage #lname {
+  display: none;
   font-size: 1.25em;
 }
 
@@ -99,7 +103,6 @@ section:nth-of-type(3) {
 }
 
 .content .container .scroll {
-  background-color: black;
   float: left;
   color: white;
   -webkit-box-flex: 1;
@@ -107,48 +110,166 @@ section:nth-of-type(3) {
           flex: 1;
 }
 
+.content .container .scroll #scroll-wrap {
+  text-align: center;
+  margin-top: 35vh;
+}
+
+.content .container .scroll #scroll-wrap #scroll-down {
+  display: none;
+  font-size: 30px;
+  color: #CCCCCC;
+  text-decoration: none;
+  font-weight: 200;
+  -webkit-animation: float 3s ease-in-out infinite;
+          animation: float 3s ease-in-out infinite;
+}
+
+.content .container .scroll #scroll-wrap #scroll-down:hover {
+  color: #0bec9a;
+}
+
+.content .container .scroll #scroll-wrap #scroll-down:hover .material-icons.md-light {
+  color: #0bec9a;
+}
+
 .content .container .pic {
-  background-color: aqua;
-  float: right;
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
+  position: relative;
+}
+
+.content .container .pic #pic-wrap {
+  width: 22rem;
+  margin: 0 auto;
+  margin-top: 13rem;
+  display: none;
+}
+
+.content .container .pic #pic-wrap #parallelogram1 {
+  width: 250px;
+  height: 250px;
+  background: #0bec9a;
+  -webkit-transform: skew(-10deg);
+          transform: skew(-10deg);
+  -webkit-animation: example 5s ease-in-out;
+          animation: example 5s ease-in-out;
+}
+
+.content .container .pic #pic-wrap #parallelogram2 {
+  position: absolute;
+  margin-top: -14rem;
+  margin-left: 1rem;
+  width: 300px;
+  height: 300px;
+  -webkit-transform: skew(-10deg);
+          transform: skew(-10deg);
+  background: #0bec9a;
+  border: 10px solid white;
+  overflow: hidden;
+  -webkit-box-shadow: 0 10px 15px 0px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 10px 15px 0px rgba(0, 0, 0, 0.6);
+}
+
+.content .container .pic #pic-wrap #parallelogram2 img {
+  -webkit-transform: skew(10deg);
+          transform: skew(10deg);
+  width: 120%;
+  display: block;
+  margin: 0 -10%;
+}
+
+.content .container .pic #pic-wrap #parallelogram3 {
+  position: relative;
+  margin-left: 14rem;
+  width: 100px;
+  height: 100px;
+  -webkit-transform: skew(-10deg);
+          transform: skew(-10deg);
+  background: #0bec9a;
+  opacity: 0.7;
 }
 
 @media (max-width: 1120px) {
   .content .container .text #welcomeMessage {
-    border-color: aquamarine !important;
     width: 25rem;
     font-size: 7rem;
     line-height: 6rem;
+    margin-top: 15vh;
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
     margin-bottom: 50px;
   }
+  .content .container .pic {
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  .content .container .pic #pic-wrap {
+    margin-top: 6rem;
+  }
 }
 
 @media (max-width: 800px) {
+  .content {
+    padding-top: 0;
+  }
   .content .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 90vh;
+    height: 100vh;
+  }
+  .content .container .text {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
   }
   .content .container .text #welcomeMessage {
     margin: 0 auto;
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
   }
-  .scroll {
+  .content .container .scroll {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
   }
-  .pic {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+  .content .container .scroll #scroll-wrap {
+    margin-top: -12vh;
+  }
+  .content .container .scroll #scroll-wrap #scroll-down {
+    font-size: 30px;
+    color: #CCCCCC;
+    text-decoration: none;
+    font-weight: 200;
+    -webkit-animation: float 3s ease-in-out infinite;
+            animation: float 3s ease-in-out infinite;
+  }
+  .content .container .scroll #scroll-wrap #scroll-down:hover {
+    color: #0bec9a;
+  }
+  .content .container .scroll #scroll-wrap #scroll-down:hover .material-icons.md-light {
+    color: #0bec9a;
+  }
+  .content .container .scroll #scroll-wrap #scroll-down i {
+    display: block;
+    margin-top: -5px !important;
+  }
+  .content .container .pic {
+    margin-top: -12vh;
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  .content .container .pic #pic-wrap {
+    margin-top: 6rem;
   }
 }
 
@@ -176,6 +297,54 @@ section:nth-of-type(3) {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+  }
+}
+
+@-webkit-keyframes float {
+  0% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+  50% {
+    -webkit-transform: translatey(20px);
+            transform: translatey(20px);
+  }
+  100% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+}
+
+@keyframes float {
+  0% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+  50% {
+    -webkit-transform: translatey(20px);
+            transform: translatey(20px);
+  }
+  100% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+}
+
+@-webkit-keyframes example {
+  0% {
+    opacity: .3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes example {
+  0% {
+    opacity: .3;
+  }
+  100% {
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=style.css.map */

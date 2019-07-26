@@ -6,19 +6,22 @@ $txt-color: #eeeeee;
     height: 100vh;
     background: url("../images/pasich_lowpolybg.png") no-repeat center;
     background-attachment: fixed;
+    overflow: hidden;
 
 .container {
+    // margin-top: 10vh;
   margin: 0 auto;
   height: 80vh;
   display: flex;
   flex-direction: row;
 
 
+
     .text{
             flex: 3;
              #welcomeMessage{
                  display: block;
-                margin-left: 5vw;
+                margin-left: 8vw;
                 margin-top: 8vh;
                 width: 40rem;
                 color: $txt-color;
@@ -33,7 +36,7 @@ $txt-color: #eeeeee;
         
                 #hi{
                     font-size: 1.53em;
-                    // display: none;  
+                    display: none;  
                 }
         
                 #green{
@@ -41,11 +44,11 @@ $txt-color: #eeeeee;
                     color: $main-green;
                 }
                 #name{
-                    // display: none;  
+                    display: none;  
                     color: $main-green;
                 }
                 #lname{
-                    // display: none;  
+                    display: none;  
                     font-size: 1.25em;
                 }
                 #info{
@@ -64,19 +67,84 @@ $txt-color: #eeeeee;
     
 
 .scroll{
-    background-color: black;
     float: left;
-    // height: 40vh;
     color: white;
-    // width: 30vw;
     flex:1;
+
+    #scroll-wrap{
+        text-align: center;
+        margin-top: 35vh;
+
+    #scroll-down {
+        display: none;
+        font-size: 30px;
+        color: #CCCCCC;
+        text-decoration: none;
+        font-weight: 200;
+        animation: float 3s ease-in-out infinite;
+        &:hover{
+            color: $main-green;
+            .material-icons.md-light { color: $main-green }
+        }
+    }
+}
+
+
+
   }
 
   .pic{
-      background-color: aqua;
-      float: right;
-    //   width: 30vw;
+    // float: right;
     flex: 3;
+    position: relative;
+
+    #pic-wrap{
+        width: 22rem;
+        margin: 0 auto;
+        margin-top: 13rem;
+        display: none;  
+    
+            #parallelogram1 {
+            width:250px;
+            height: 250px;
+            background: $main-green;
+            transform: skew(-10deg);
+            animation: example 5s ease-in-out;
+            }
+    
+            #parallelogram2 {
+            position: absolute;
+            margin-top: -14rem;
+            margin-left: 1rem;
+            width: 300px;
+            height: 300px;
+            transform: skew(-10deg);
+            background: $main-green;
+            border: 10px solid white;
+            overflow: hidden;
+            box-shadow: 0 10px 15px 0px rgba(0,0,0,0.6);
+         
+            img{
+                transform: skew(10deg);
+                width:120%;
+                display:block;
+                margin:0 -10%;
+            }
+    
+        }
+    
+            #parallelogram3 {
+            position: relative;
+            margin-left: 14rem;
+            width: 100px;
+            height: 100px;
+            transform: skew(-10deg);
+            background: $main-green;
+            opacity: 0.7;
+            }
+        }
+        
+
   }
 
 }
@@ -90,18 +158,26 @@ $txt-color: #eeeeee;
 .content{
     .container{
         .text{
-            // position: relative;
             #welcomeMessage{
-                border-color: aquamarine !important;
                 width: 25rem;
                 font-size: 7rem;
                 line-height: 6rem;
-                // margin-top: 10vh;
-                // margin-left: 3vw;
+                margin-top: 15vh;
                 transform: scale(0.9);
                 margin-bottom: 50px;
             }
         }
+
+        
+  .pic{
+    flex: 3;
+    transform: scale(0.8);
+
+    #pic-wrap{
+        margin-top: 6rem;
+        }
+    
+  }
     }
 }
 
@@ -111,24 +187,56 @@ $txt-color: #eeeeee;
 @media (max-width: 800px) {
 
     .content{
+        padding-top: 0;
             .container{
                 flex-direction: column;
-                height: 90vh;
+                height: 100vh;
     
                 .text{
+                    flex: 2;
                     #welcomeMessage{
                         margin: 0 auto;
                         transform: scale(0.8); 
                     }
                 }
+            
+     
+            .scroll{
+
+                order:2;
+                #scroll-wrap{
+                  margin-top: -12vh;
+                #scroll-down {
+                    // display: none;
+                    font-size: 30px;
+                    color: #CCCCCC;
+                    text-decoration: none;
+                    font-weight: 200;
+                    animation: float 3s ease-in-out infinite;
+                    &:hover{
+                        color: $main-green;
+                        .material-icons.md-light { color: $main-green }
+                    }
+                    i{
+                        display: block;
+                        margin-top: -5px !important;
+                    }
+                }
             }
         }
-            .scroll{
-                order:2;
-            }
+    
             .pic{
-                order:1;
-            }
+                margin-top: -12vh;
+                flex: 2;
+                transform: scale(0.5);
+            
+                #pic-wrap{
+                    margin-top: 6rem;
+                    }
+                
+              }
+}
+}
 }
 
 @media (max-width: 400px) {
@@ -154,3 +262,31 @@ $txt-color: #eeeeee;
                 order:1;
             }
 }
+
+
+
+@keyframes float {
+0% {
+		transform: translatey(0px);
+	}
+50% {
+		transform: translatey(20px);
+	}
+100% {
+		transform: translatey(0px);
+	}
+}
+
+@keyframes example {
+0% {
+    // width:100px;
+    // height: 100px;
+        opacity: .3;
+}
+ 100% {
+
+    // width:250px;
+    // height: 250px;
+        opacity: 1;
+        }
+ }
