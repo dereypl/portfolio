@@ -76,14 +76,14 @@ $txt-color: #eeeeee;
     #scroll-wrap{
         text-align: center;
         margin-top: 35vh;
-
+        animation: float 3s ease-in-out infinite;
     #scroll-down {
         display: none;
         font-size: 30px;
         color: #CCCCCC;
         text-decoration: none;
         font-weight: 200;
-        animation: float 3s ease-in-out infinite;
+        
         &:hover{
             color: $main-green;
             .material-icons.md-light { color: $main-green }
@@ -96,7 +96,6 @@ $txt-color: #eeeeee;
   }
 
   .pic{
-    // float: right;
     flex: 3;
     position: relative;
 
@@ -106,6 +105,8 @@ $txt-color: #eeeeee;
         margin-top: 13rem;
         display: none;  
     
+        #wrap-parall{
+            height: 250px;
             #parallelogram1 {
             width:250px;
             height: 250px;
@@ -113,6 +114,7 @@ $txt-color: #eeeeee;
             transform: skew(-10deg);
             animation: example 5s ease-in-out;
             }
+        }
     
             #parallelogram2 {
             position: absolute;
@@ -209,7 +211,6 @@ $txt-color: #eeeeee;
                 #scroll-wrap{
                   margin-top: -12vh;
                 #scroll-down {
-                    // display: none;
                     font-size: 30px;
                     color: #CCCCCC;
                     text-decoration: none;
@@ -233,7 +234,8 @@ $txt-color: #eeeeee;
                 transform: scale(0.5);
             
                 #pic-wrap{
-                    margin-top: 6rem;
+                    margin-top: -25px;
+                    background-color: aqua;
                     }
                 
               }
@@ -281,14 +283,14 @@ $txt-color: #eeeeee;
 
 @keyframes example {
 0% {
-    // width:100px;
-    // height: 100px;
-        opacity: .3;
+    width: 0;
+    height: 0px;
+    opacity: .3;
 }
- 100% {
+100% {
 
-    // width:250px;
-    // height: 250px;
-        opacity: 1;
-        }
- }
+    width:250px;
+    height: 250px;
+    opacity: 1;
+}
+}
