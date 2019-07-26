@@ -84,14 +84,14 @@
                 </div>
                 <div class="change-image-section">
                     <div class="change">
-                        <div class="arrow arrow-up">
+                        <div class="arrow arrow-up noSelect">
                             <i class="material-icons md-light md-36">keyboard_arrow_up</i>
                         </div>
                         <div class="img img-1"></div>
                         <div class="img img-2 selected"></div>
                         <div class="img img-3"></div>
                         <div class="img img-4"></div>
-                        <div class="arrow arrow-down"><i class="material-icons md-light md-36">
+                        <div class="arrow arrow-down noSelect"><i class="material-icons md-light md-36">
                                 keyboard_arrow_down
                             </i></div>
                     </div>
@@ -100,7 +100,7 @@
                 <div class="images">
                     <div id="laptop" data-aos="fade-left" data-aos-duration="2000" data-aos-offset="500"
                         data-aos-delay="100">
-                        <img src="./images/smt1.png" id="sematoPicture" /></div>
+                        <img src="./images/smt2.png" id="sematoPicture" /></div>
                 </div>
             </div>
         </div>
@@ -136,6 +136,52 @@
                     }, 1000);
                 }
             });
+
+            $(".img").click(function () {
+                $(".img").removeClass('selected');
+                $(this).addClass('selected');
+                changeImage($(this));
+
+            });
+
+            $(".arrow-down").click(function () {
+                let next = $(".img.selected").next();
+                if (next.hasClass('img')) {
+                    $(".img.selected").removeClass('selected');
+                    next.addClass('selected');
+                    changeImage(next);
+                }
+            });
+
+            $(".arrow-up").click(function () {
+                let prev = $(".img.selected").prev();
+                if (prev.hasClass('img')) {
+                    $(".img.selected").removeClass('selected');
+                    prev.addClass('selected');
+                    changeImage(prev);
+                }
+            });
+
+            let changeImage = (e) => {
+
+                switch (e.attr('class')) {
+                    case 'img img-1 selected':
+                        $("#sematoPicture").attr("src", "./images/smt1.png");
+                        break;
+                    case 'img img-2 selected':
+                        $("#sematoPicture").attr("src", "./images/smt2.png");
+                        break;
+                    case 'img img-3 selected':
+                        $("#sematoPicture").attr("src", "./images/smt3.png");
+                        break;
+                    case 'img img-4 selected':
+                        $("#sematoPicture").attr("src", "./images/smt4.png");
+                        break;
+                }
+            }
+
+
+
 
 
         });
