@@ -361,6 +361,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  width: 100%;
 }
 
 #semato .container .description {
@@ -376,7 +377,7 @@
   color: #252525;
   z-index: 100;
   padding-left: 5vw;
-  font-size: 80px;
+  font-size: 10vh;
 }
 
 #semato .container .description .title .number {
@@ -386,13 +387,13 @@
 
 #semato .container .description .title .light {
   font-weight: 200;
-  font-size: 25px;
+  font-size: 3vh;
   letter-spacing: 10px;
 }
 
 #semato .container .description .semato-content {
   margin-left: 5vw;
-  margin-top: 5rem;
+  margin-top: 6vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -403,6 +404,10 @@
   color: #292929;
 }
 
+#semato .container .description .semato-content .describe {
+  font-size: 2vh;
+}
+
 #semato .container .description .semato-content .describe h1 {
   text-transform: uppercase;
   color: #242424;
@@ -410,7 +415,7 @@
 }
 
 #semato .container .description .semato-content .technology {
-  margin-top: 3rem;
+  margin-top: 3vh;
 }
 
 #semato .container .description .semato-content .technology ul li {
@@ -420,8 +425,8 @@
 }
 
 #semato .container .description .semato-content .github {
-  margin-top: 3rem;
-  font-size: 15px;
+  margin-top: 3vh;
+  font-size: 5vhpx;
 }
 
 #semato .container .description .semato-content .github a {
@@ -443,23 +448,23 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  text-align: center;
-}
-
-#semato .container .change-image-section .change {
-  width: 50%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding-top: 15vh;
-  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #semato .container .change-image-section .change .arrow {
+  margin-top: 20px;
+  margin-bottom: 20px;
   height: 2rem;
   width: 5rem;
-  margin-top: 10px;
+  text-align: center;
   opacity: 0.4;
   cursor: pointer;
 }
@@ -473,7 +478,6 @@
   width: 5rem;
   background-color: #181818;
   border-radius: 50%;
-  margin: 10px auto;
   opacity: .4;
   cursor: pointer;
 }
@@ -483,7 +487,8 @@
 }
 
 #semato .container .change-image-section .change .selected {
-  margin: 25px auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
   opacity: 1;
@@ -522,10 +527,67 @@
   -webkit-box-flex: 4;
       -ms-flex: 4;
           flex: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-#semato .container .images #laptop {
-  margin-top: 5rem;
+#semato .container .images #laptop img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  #semato {
+    padding-top: 0;
+  }
+  #semato .container {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    height: 100vh;
+  }
+  #semato .container .description {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  #semato .container .description .title {
+    margin-top: 0vh;
+    font-size: 3vh;
+  }
+  #semato .container .description .semato-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #semato .container .description .semato-content .github {
+    float: left;
+  }
+  #semato .container .change-image-section {
+    visibility: hidden;
+    display: none;
+  }
+  #semato .container .images {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  #semato .container .images #laptop img {
+    width: 70%;
+    height: auto;
+  }
 }
 
 * {

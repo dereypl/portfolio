@@ -19,6 +19,7 @@
       height: 80vh;
       display: flex;
       flex-direction: row;
+      width: 100%;
 
         .description{
             z-index: 99;
@@ -29,26 +30,27 @@
                     color:#252525;
                     z-index: 100;
                     padding-left: 5vw;
-                    font-size: 80px;
+                    font-size: 10vh;
                     .number{
                         color: #242424;
                         opacity: 0.8;
                     }
                     .light{
                         font-weight: 200;
-                        font-size: 25px;
+                        font-size: 3vh;
                         letter-spacing: 10px;
                     }
                 }
 
                 .semato-content{
                     margin-left: 5vw;
-                    margin-top: 5rem;
+                    margin-top: 6vh;
                     display: flex;
                     flex-direction: column;
                     color: #292929;
             
                     .describe{
+                        font-size: 2vh;
                          h1{
                              text-transform: uppercase;
                              color:#242424;
@@ -57,7 +59,7 @@
                      }
 
                      .technology{
-                        margin-top: 3rem;
+                        margin-top: 3vh;
           
                     ul li {
                       display: inline;
@@ -66,9 +68,9 @@
                     }
                   }
                     .github{
-                        margin-top: 3rem;
+                        margin-top: 3vh;
 
-                        font-size: 15px;
+                        font-size: 5vhpx;
                          a{
                             text-align: center;
                             padding-left: 10px;
@@ -93,17 +95,19 @@
     .change-image-section{
         z-index: 99;
         flex:1;
-        text-align: center;
+        // text-align: center;
+        display: flex;
+        align-items: center ;
+        justify-content: center;
         .change{
-            width: 50%;
-            flex-direction: column;
-            padding-top: 15vh;
-            margin: 0 auto;
+
 
         .arrow{
+            margin-top: 20px;
+            margin-bottom: 20px;
             height: 2rem;
             width: 5rem;
-            margin-top: 10px;
+        text-align: center;
             opacity: 0.4;
             cursor: pointer;
             
@@ -117,7 +121,6 @@
                 width: 5rem;
                 background-color: #181818;
                 border-radius: 50%;
-                margin: 10px auto;
                 opacity: .4;
                 cursor: pointer;
 
@@ -127,7 +130,8 @@
             }
 
             .selected{
-                margin: 25px auto;
+                margin-top: 25px;
+                margin-bottom: 25px;
                 transform: scale(1.5);
                 opacity: 1;  
                 box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.40);
@@ -159,18 +163,100 @@
                 background-position-x: 50%;
             }
         }
-
+    
     }
 
 
     .images{
         z-index: 99;
         flex:4;
-
+        display: flex;
+        align-items: center ;
+        justify-content: center;
             #laptop{
-                margin-top: 5rem;
+               
+                img{
+                width: 100%;
+                height: auto;
+                }
             }
         }
 
       }
+  }
+
+
+
+@media (max-width: 900px) {
+
+#semato{
+    padding-top: 0;
+    .container{
+        flex-direction: column !important;
+        height: 100vh;
+        .description{
+            order: 3;
+
+            .title{
+                margin-top: 0vh;
+                font-size: 3vh;
+            }
+            .semato-content{
+                display: flex;
+                flex-direction: column;
+
+                .github{
+                    float: left;
+                }
+            }
+           
+        }
+
+        .change-image-section{
+            visibility: hidden;
+            display: none;
+        }
+        //     display: none;
+        //     background-color: red;
+        //     order: 2;
+        //     display: inline-flex !important;
+        //     flex-direction: row !important;
+
+        //     .change{
+        //         background-color: #181818;
+        //         flex-direction: row !important;
+        //         justify-items: center;
+
+        //     .arrow{
+        //         display: inline-flex;
+               
+        //     }
+        //     .arrow-up{
+        //         transform: rotate(-90deg);
+        //        }
+
+        //     .arrow-down{
+        //         transform: rotate(-90deg);
+        //     }
+        //     .img{
+        //         // transform: scale(0.8);
+        //         display: inline-flex;
+        //         // margin-left: 5%;
+        //     }
+        //     }
+        // }
+
+        .images{
+            order: 1;
+            #laptop{
+                
+                img{
+                width: 70%;
+                height: auto;
+        
+                }
+            }
+        }
+    }
+}
   }
