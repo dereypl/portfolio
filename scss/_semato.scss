@@ -30,23 +30,21 @@
 
         .description{
             z-index: 99;
-            flex:3.5;
+            flex:4;
             padding: 0;
                 .title{
                     position: relative;
                     color:#252525;
                     z-index: 100;
-                    margin-top: -1rem;
                     padding-left: 5vw;
                     font-size: 80px;
-            
                     .number{
                         color: #242424;
                         opacity: 0.8;
                     }
                     .light{
                         font-weight: 200;
-                        font-size: 30px;
+                        font-size: 25px;
                         letter-spacing: 10px;
                     }
                 }
@@ -109,7 +107,13 @@
         .images{
             z-index: 99;
             flex:4;
-            background-color: yellow;
+            // background-color: yellow;
+
+            #laptop{
+                // background-color: blue;
+                // transform: scale(0.9);
+                margin-top: 5rem;
+            }
         }
 
       }

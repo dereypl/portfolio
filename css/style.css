@@ -365,9 +365,9 @@
 
 #semato .container .description {
   z-index: 99;
-  -webkit-box-flex: 3.5;
-      -ms-flex: 3.5;
-          flex: 3.5;
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
   padding: 0;
 }
 
@@ -375,7 +375,6 @@
   position: relative;
   color: #252525;
   z-index: 100;
-  margin-top: -1rem;
   padding-left: 5vw;
   font-size: 80px;
 }
@@ -387,7 +386,7 @@
 
 #semato .container .description .title .light {
   font-weight: 200;
-  font-size: 30px;
+  font-size: 25px;
   letter-spacing: 10px;
 }
 
@@ -452,7 +451,10 @@
   -webkit-box-flex: 4;
       -ms-flex: 4;
           flex: 4;
-  background-color: yellow;
+}
+
+#semato .container .images #laptop {
+  margin-top: 5rem;
 }
 
 * {
