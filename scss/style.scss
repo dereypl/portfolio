@@ -1,4 +1,4 @@
-@import 'welcome-page', 'semato', 'shoesmp';
+@import 'welcome-page', 'semato', 'shoesmp','gallery';
 
 *{
     margin: 0;
@@ -24,6 +24,12 @@
     &:nth-of-type(3) {
       // background-color: #161618;
       background-image: linear-gradient(to right, #060f2b , #071338);
+    }
+
+    &:nth-of-type(4) {
+      // background-color: #161618;
+      background-color: #161618;
+      height: auto;
 
     }
   }

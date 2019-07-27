@@ -56,12 +56,9 @@
         .right{
             z-index: 99;
             flex: 1;
-            // background-color: yellow;
-
-        #shoePc{
-            // position: absolute;
-            // margin-top: 100px;
-        }
+            img{
+                margin-top: 10%;
+            }
 
         }
 
@@ -70,7 +67,7 @@
 
 
 
-@media (max-width: 1600px) {
+@media (max-width: 800px) {
 
     #shoesmp{
         padding-top: 0;
@@ -88,7 +85,6 @@
            
 
             .left{
-
                 .title{
                     color: white;
                 }
@@ -105,9 +101,10 @@
             .right{
                 #shoePc{
                     img{
-            margin-left: 10%;
+                    //   margin-top: 0;
+                        margin-left: 10%;
                         width: 80%;
-                        height: auto;
+                        // height: 50%;
                     }
                 }
             }
