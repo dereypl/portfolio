@@ -1,0 +1,116 @@
+
+
+#shoesmp{
+    padding-top: 10vh;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+
+    #shoeBack{
+        margin-top: -10vh;
+        position: absolute;
+        background-color: rgb(247, 247, 247);
+        width: 60%;
+        height: 100vh;
+        transform: skew(46deg);
+        // margin-left: 20%;
+        // z-index: 0;
+    }
+    
+    .container-shoe {
+      margin: 0 auto;
+      height: 80vh;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+
+        .left{
+            z-index: 99;
+            flex: 1;
+
+        .title{
+            position: relative;
+            color:#252525;
+            z-index: 100;
+            padding-left: 5vw;
+            font-size: 10vh;
+            .number{
+            color: #242424;
+            opacity: 0.8;
+            }
+            .light{
+            font-weight: 200;
+            font-size: 3vh;
+            letter-spacing: 10px;
+             }
+
+        }
+
+        #shoeShow{
+            margin-top: 5%;
+            margin-left: 10%;
+        }
+
+        }
+
+        .right{
+            z-index: 99;
+            flex: 1;
+            // background-color: yellow;
+
+        #shoePc{
+            // position: absolute;
+            // margin-top: 100px;
+        }
+
+        }
+
+    }
+}
+
+
+
+@media (max-width: 1600px) {
+
+    #shoesmp{
+        padding-top: 0;
+        overflow: hidden !important;
+
+        #shoeBack{
+            visibility: hidden;
+            display: none;
+        }
+       
+        .container-shoe{
+            flex-direction: column !important;
+            height: 100vh;
+
+           
+
+            .left{
+
+                .title{
+                    color: white;
+                }
+
+                #shoeShow{
+                    img{
+                        width: 80%;
+                        height: auto;
+                    }
+                }
+            }
+
+
+            .right{
+                #shoePc{
+                    img{
+            margin-left: 10%;
+                        width: 80%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}

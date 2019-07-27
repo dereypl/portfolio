@@ -457,6 +457,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
 }
 
 #semato .container .change-image-section .change .arrow {
@@ -583,9 +584,111 @@
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    overflow: hidden;
   }
   #semato .container .images #laptop img {
     width: 70%;
+    height: auto;
+  }
+}
+
+#shoesmp {
+  padding-top: 10vh;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+#shoesmp #shoeBack {
+  margin-top: -10vh;
+  position: absolute;
+  background-color: #f7f7f7;
+  width: 60%;
+  height: 100vh;
+  -webkit-transform: skew(46deg);
+          transform: skew(46deg);
+}
+
+#shoesmp .container-shoe {
+  margin: 0 auto;
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+
+#shoesmp .container-shoe .left {
+  z-index: 99;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#shoesmp .container-shoe .left .title {
+  position: relative;
+  color: #252525;
+  z-index: 100;
+  padding-left: 5vw;
+  font-size: 10vh;
+}
+
+#shoesmp .container-shoe .left .title .number {
+  color: #242424;
+  opacity: 0.8;
+}
+
+#shoesmp .container-shoe .left .title .light {
+  font-weight: 200;
+  font-size: 3vh;
+  letter-spacing: 10px;
+}
+
+#shoesmp .container-shoe .left #shoeShow {
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
+#shoesmp .container-shoe .right {
+  z-index: 99;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+@media (max-width: 1600px) {
+  #shoesmp {
+    padding-top: 0;
+    overflow: hidden !important;
+  }
+  #shoesmp #shoeBack {
+    visibility: hidden;
+    display: none;
+  }
+  #shoesmp .container-shoe {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    height: 100vh;
+  }
+  #shoesmp .container-shoe .left .title {
+    color: white;
+  }
+  #shoesmp .container-shoe .left #shoeShow img {
+    width: 80%;
+    height: auto;
+  }
+  #shoesmp .container-shoe .right #shoePc img {
+    margin-left: 10%;
+    width: 80%;
     height: auto;
   }
 }
@@ -616,7 +719,8 @@ section:nth-of-type(2) {
 }
 
 section:nth-of-type(3) {
-  background-color: #161618;
+  background-image: -webkit-gradient(linear, left top, right top, from(#060f2b), to(#071338));
+  background-image: linear-gradient(to right, #060f2b, #071338);
 }
 
 .noSelect {
