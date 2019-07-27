@@ -13,8 +13,6 @@
         width: 60%;
         height: 100vh;
         transform: skew(46deg);
-        // margin-left: 20%;
-        // z-index: 0;
     }
     
     .container-shoe {
@@ -23,7 +21,7 @@
       display: flex;
       flex-direction: row;
       width: 100%;
-
+        align-items: center;
         .left{
             z-index: 99;
             flex: 1;
@@ -49,6 +47,12 @@
         #shoeShow{
             margin-top: 5%;
             margin-left: 10%;
+            
+            img{
+                width: 100%;
+            height: auto;
+            }
+
         }
 
         }
@@ -56,8 +60,11 @@
         .right{
             z-index: 99;
             flex: 1;
+         
             img{
-                margin-top: 10%;
+                width: 100%;
+                height: auto;
+                margin-top: 10vh; 
             }
 
         }
@@ -65,9 +72,7 @@
     }
 }
 
-
-
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 
     #shoesmp{
         padding-top: 0;
@@ -82,11 +87,16 @@
             flex-direction: column !important;
             height: 100vh;
 
-           
-
             .left{
+                order: 2;
                 .title{
+                padding-left: 0;
                     color: white;
+                     font-size: 5vh;
+                     width: 60%;
+                     display: block;
+                     margin: 0 auto;
+                    text-align: center;
                 }
 
                 #shoeShow{
@@ -97,17 +107,17 @@
                 }
             }
 
-
             .right{
                 #shoePc{
                     img{
-                    //   margin-top: 0;
+                      margin-top: 0;
                         margin-left: 10%;
                         width: 80%;
-                        // height: 50%;
+                        height: auto;
                     }
                 }
             }
+        
         }
     }
 }

@@ -13,7 +13,7 @@
     padding-top: 10vh;
     height: 100vh;
     width: 100%;
-
+    overflow: hidden;
     .container {
       margin: 0 auto;
       height: 80vh;
@@ -93,9 +93,7 @@
     }
 
     .change-image-section{
-        z-index: 99;
         flex:1;
-        // text-align: center;
         display: flex;
         align-items: center ;
         justify-content: center;
@@ -175,7 +173,6 @@
         align-items: center ;
         justify-content: center;
             #laptop{
-               
                 img{
                 width: 100%;
                 height: auto;
@@ -217,44 +214,18 @@
             visibility: hidden;
             display: none;
         }
-        //     display: none;
-        //     background-color: red;
-        //     order: 2;
-        //     display: inline-flex !important;
-        //     flex-direction: row !important;
-
-        //     .change{
-        //         background-color: #181818;
-        //         flex-direction: row !important;
-        //         justify-items: center;
-
-        //     .arrow{
-        //         display: inline-flex;
-               
-        //     }
-        //     .arrow-up{
-        //         transform: rotate(-90deg);
-        //        }
-
-        //     .arrow-down{
-        //         transform: rotate(-90deg);
-        //     }
-        //     .img{
-        //         // transform: scale(0.8);
-        //         display: inline-flex;
-        //         // margin-left: 5%;
-        //     }
-        //     }
-        // }
+    
 
         .images{
+            margin-top: 10%;
             order: 1;
             flex:2;
             overflow: hidden;
             #laptop{
-                
+                width: 80%;
+                height: 100%;
                 img{
-                width: 70%;
+                width: 100%;
                 height: auto;
         
                 }
