@@ -1,97 +1,90 @@
 .gallery{
-    padding-top: .5vw;
-    font-size: 0;
+    // padding-top: .5vw;
+    // font-size: 0;
     flex-flow: wrap;
     display: flex;
 
-    div{
+    .gallery_pic{
         margin: .1vw;
         overflow: hidden;
         flex: auto;
         width: 40vh;
         height: 40vh;
         // height: auto;
+        background-size: cover;
+        background-position: center;
+
         &:nth-child(1){
             background-image: url('../images/mp_gallery1.jpg');
-            background-position: center;
-            background-size: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+
         }
 
         &:nth-child(2){
             background-image: url('../images/mp_gallery2.jpg');
-            background-position: center;
-            background-size: 100%;
         }
 
         &:nth-child(3){
             background-image: url('../images/mp_gallery3.png');
-            background-position: center;
-            background-size: 100%;
         }
 
         &:nth-child(4){
             background-image: url('../images/mp_gallery4.png');
-            background-position: center;
-            background-size: 100%;
         }
 
         &:nth-child(5){
             background-image: url('../images/mp_gallery5.png');
-            background-position: center;
-            background-size: 100%;
         }
 
         &:nth-child(6){
             background-image: url('../images/mp_gallery6.jpg');
-            background-position: center;
-            background-size: 100%;
         }
         &:nth-child(7){
             background-image: url('../images/mp_gallery7.png');
-            background-position: center;
-            background-size: 150%;
         }
 
         &:nth-child(8){
             background-image: url('../images/mp_gallery8.png');
-            background-position: center;
-            background-size: 130%;
         }
 
         &:nth-child(9){
             background-image: url('../images/mp_gallery9.png');
-            background-position: center;
-            background-size: 100%;
         }
         &:nth-child(10){
             background-image: url('../images/mp_gallery10.png');
-            background-position: center;
-            background-size: 100%;
         }
 
         &:nth-child(11){
             background-image: url('../images/mp_gallery11.png');
-            background-position: center;
-            background-size: 100%;
         }
         &:nth-child(12){
             background-image: url('../images/mp_gallery12.png');
-            background-position: center;
-            background-size: 150%;
+            background-size: 140%;
+
         }
         &:nth-child(13){
             background-image: url('../images/mp_gallery13.jpg');
-            background-position: center;
-            background-size: 100%;
         }
         &:nth-child(14){
             background-image: url('../images/mp_gallery14.png');
-            background-position: center;
-            background-size: 100%;
+
+        }  
+
+        div {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            
+            &:hover{
+                background-color: rgba(0, 0, 0, 0.0);
+            }
         }
 
     }
 }
+
+
 
 @media screen and (max-width: 400px){
     .gallery{
