@@ -1,6 +1,15 @@
+.title{
+    color:white;
+    z-index: 100;
+    padding: 3vh;
+    padding-left: 5vw;
+    font-size: 5vh;
+    .number{
+    color: #949494;
+    opacity: 0.8;
+    }
+}
 .gallery{
-    // padding-top: .5vw;
-    // font-size: 0;
     flex-flow: wrap;
     display: flex;
 
@@ -10,7 +19,6 @@
         flex: auto;
         width: 40vh;
         height: 40vh;
-        // height: auto;
         background-size: cover;
         background-position: center;
 
@@ -87,10 +95,18 @@
 
 
 @media screen and (max-width: 400px){
+
+    .title{
+        margin: 0 auto;
+        width: 80%;
+    }
     .gallery{
         margin: 0;
-        div{
-                // margin: 0;
-        }
+        .gallery_pic{
+
+            div{
+            background-color: rgba(0, 0, 0, 0.0);
+            }
+        }   
     }
 }

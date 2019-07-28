@@ -693,6 +693,8 @@
 #shoesmp .container-shoe .left #shoeShow img {
   width: 100%;
   height: auto;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 #shoesmp .container-shoe .right {
@@ -706,6 +708,8 @@
   width: 100%;
   height: auto;
   margin-top: 10vh;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 @media (max-width: 900px) {
@@ -739,7 +743,7 @@
     text-align: center;
   }
   #shoesmp .container-shoe .left #shoeShow img {
-    width: 80%;
+    width: 60%;
     height: auto;
   }
   #shoesmp .container-shoe .right {
@@ -752,6 +756,19 @@
     width: 80%;
     height: auto;
   }
+}
+
+.title {
+  color: white;
+  z-index: 100;
+  padding: 3vh;
+  padding-left: 5vw;
+  font-size: 5vh;
+}
+
+.title .number {
+  color: #949494;
+  opacity: 0.8;
 }
 
 .gallery {
@@ -844,8 +861,15 @@
 }
 
 @media screen and (max-width: 400px) {
+  .title {
+    margin: 0 auto;
+    width: 80%;
+  }
   .gallery {
     margin: 0;
+  }
+  .gallery .gallery_pic div {
+    background-color: rgba(0, 0, 0, 0);
   }
 }
 
