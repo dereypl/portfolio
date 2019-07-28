@@ -100,8 +100,6 @@
         justify-content: center;
         overflow: hidden;
         .change{
-
-
         .arrow{
             margin-top: 20px;
             margin-bottom: 20px;
@@ -117,6 +115,7 @@
         }
 
             .img{
+               
                 height: 5rem;
                 width: 5rem;
                 background-color: #181818;
@@ -186,6 +185,20 @@
 
 
 
+  @media (max-width: 1420px) {
+
+    #semato{
+        .container{
+    .change-image-section{
+
+        transform: scale(0.65);
+    }
+
+  }
+}
+  }
+
+
 @media (max-width: 900px) {
 
 #semato{
@@ -218,20 +231,28 @@
     
 
         .images{
-            margin-top: 10%;
+            margin-top: 5%;
             order: 1;
-            flex:2;
-            overflow: hidden;
+            flex:3;
+            height: 40vh;
             #laptop{
-                width: 80%;
-                height: 100%;
-                img{
-                width: 100%;
-                height: auto;
-        
-                }
+                transform: scale(0.7);
             }
         }
     }
 }
+}
+
+
+  @media (max-width: 500px) {
+    #semato{
+        .container{
+            .images{
+                #laptop{
+                transform: scale(1);
+
+                }
+            }
+        }
+    }
   }

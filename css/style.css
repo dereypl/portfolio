@@ -168,6 +168,21 @@
   opacity: 0.7;
 }
 
+@media (max-width: 1420px) {
+  .content .container .text #welcomeMessage {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    margin-left: 2vw;
+  }
+  .content .container .pic {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  .content .container .pic #pic-wrap {
+    margin-top: 8rem;
+  }
+}
+
 @media (max-width: 1120px) {
   .content .container .text #welcomeMessage {
     width: 25rem;
@@ -545,6 +560,13 @@
   height: auto;
 }
 
+@media (max-width: 1420px) {
+  #semato .container .change-image-section {
+    -webkit-transform: scale(0.65);
+            transform: scale(0.65);
+  }
+}
+
 @media (max-width: 900px) {
   #semato {
     padding-top: 0;
@@ -582,22 +604,25 @@
     display: none;
   }
   #semato .container .images {
-    margin-top: 10%;
+    margin-top: 5%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    -webkit-box-flex: 2;
-        -ms-flex: 2;
-            flex: 2;
-    overflow: hidden;
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+    height: 40vh;
   }
   #semato .container .images #laptop {
-    width: 80%;
-    height: 100%;
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
   }
-  #semato .container .images #laptop img {
-    width: 100%;
-    height: auto;
+}
+
+@media (max-width: 500px) {
+  #semato .container .images #laptop {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
@@ -717,8 +742,12 @@
     width: 80%;
     height: auto;
   }
+  #shoesmp .container-shoe .right {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    width: 100%;
+  }
   #shoesmp .container-shoe .right #shoePc img {
-    margin-top: 0;
     margin-left: 10%;
     width: 80%;
     height: auto;

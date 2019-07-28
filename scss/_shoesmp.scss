@@ -108,9 +108,10 @@
             }
 
             .right{
+                justify-self: center;
+                width: 100%;
                 #shoePc{
                     img{
-                      margin-top: 0;
                         margin-left: 10%;
                         width: 80%;
                         height: auto;

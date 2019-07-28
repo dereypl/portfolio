@@ -154,7 +154,27 @@ $txt-color: #eeeeee;
 }
 }
 
+@media (max-width: 1420px) {
+    .content{
+        .container{
+            .text{
+                #welcomeMessage{
+                    transform: scale(0.8);
+                    margin-left: 2vw;
+                }
+            }
 
+            .pic{
+                transform: scale(0.8);
+            
+                #pic-wrap{
+                    margin-top: 8rem;
+                    }
+                
+              }
+}
+    }
+}
 
 
 
